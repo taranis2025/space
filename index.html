@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venezuela Nanosat Workshop - A Leap into Space Technology</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: #000 url('images/space-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0, 20, 40, 0.85);
+            box-shadow: 0 0 20px rgba(0, 80, 150, 0.5);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #0077ff;
+        }
+        .logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #4fc3f7;
+            text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4fc3f7;
+            margin-top: 40px;
+            border-bottom: 1px solid #0077ff;
+            padding-bottom: 10px;
+        }
+        h3 {
+            color: #81d4fa;
+            margin-top: 25px;
+        }
+        .author {
+            font-style: italic;
+            color: #aaa;
+        }
+        .date {
+            color: #aaa;
+            margin-bottom: 30px;
+        }
+        .highlight {
+            background-color: rgba(0, 60, 120, 0.5);
+            padding: 20px;
+            border-left: 4px solid #0077ff;
+            margin: 25px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        ul {
+            padding-left: 25px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            border-top: 1px solid #0077ff;
+            color: #aaa;
+        }
+        .cta {
+            background-color: rgba(0, 100, 180, 0.3);
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+            border: 1px solid #0077ff;
+        }
+        .emoji {
+            font-size: 1.2em;
+        }
+        .partners {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .partner-logo {
+            max-width: 180px;
+            height: auto;
+            transition: transform 0.3s;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .partner-logo:hover {
+            transform: scale(1.05);
+        }
+        .partner-title {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 25px;
+            color: #4fc3f7;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s;
+            height: 200px;
+        }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #0077ff, transparent);
+            margin: 40px 0;
+        }
+        a {
+            color: #4fc3f7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        a:hover {
+            color: #81d4fa;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="images/andes_space2.png" alt="Andes Space Foundation Logo" class="logo">
+            <h1>Nanosatellite Workshop in Venezuela: A Leap into the Future of Space Technology</h1>
+            <div class="author">By Andes Space Foundation</div>
+            <div class="date">Date: May 15-17, 2025</div>
+        </header>
+
+        <section>
+            <h2>Introduction</h2>
+            <p>The rapid advancement of nanosatellite technology is revolutionizing space exploration, making it more accessible to countries like Venezuela. Recently, a groundbreaking <strong>Nanosatellite Workshop</strong> was held in San Cristobal, Venezuela, bringing together students, engineers, and space enthusiasts to learn about CubeSats, satellite design, and space applications.</p>
+            <p>This blog covers the key highlights, sessions, and takeaways from this exciting field.</p>
+        </section>
+
+        <!-- Partners & Collaborators Section -->
+        <section>
+            <h2>Partners & Collaborators</h2>
+            <div class="partners">
+                <div class="partner-title">Organized in collaboration with:</div>
+                <!-- Replace with your actual PNG logos -->
+                <img src="images/KSF_logo.png" alt="Andes Space Foundation" class="partner-logo">
+                <img src="images/unoosa.png" alt="UNOOSA" class="partner-logo">
+                <img src="images/unet.png" alt="UNET" class="partner-logo">
+                <img src="images/space_congress.png" alt="ISTC" class="partner-logo">
+            </div>
+        </section>
+
+        <section>
+            <h2>Workshop Overview</h2>
+            <p>Organized by <strong>Andes Space Foundation</strong> in collaboration with <strong>KSF Space, UNOOSA, and UNET</strong>, the workshop aimed to:</p>
+            <ul>
+                <li>Introduce participants to <strong>CubeSat and nanosatellite technology</strong></li>
+                <li>Provide hands-on training in satellite design, sensors, and data analysis</li>
+                <li>Encourage Venezuelan talent to contribute to the <strong>NewSpace movement</strong></li>
+            </ul>
+
+            <h3>Who Attended?</h3>
+            <ul>
+                <li>University students (engineering, physics, computer science)</li>
+                <li>Researchers and professors</li>
+                <li>Industry professionals from aerospace and tech sectors</li>
+                <li>International partners from 12 countries</li>
+            </ul>
+        </section>
+
+        <!-- Workshop Participants Gallery -->
+        <section>
+            <h2>Andes Space Foundation Workshop Members</h2>
+            <div class="gallery">
+                <!-- Replace with your actual workshop PNG images -->
+                <div class="gallery-item">
+                    <img src="images/photo-space-perso-2.png" alt="Developer">
+                    <div class="gallery-caption">Santiago - CubeSat Developer</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/Polish_20250427_224415950.png" alt="Developer">
+                    <div class="gallery-caption">Lino - CubeSat Developer</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/robert_space.png" alt="Senior Engineer">
+                    <div class="gallery-caption">Robert - Senior Engineer</div>
+                </div>
+				<div class="gallery-item">
+                    <img src="images/esteban.png" alt="Senior Engineer">
+                    <div class="gallery-caption">Esteban - Senior Engineer</div>
+                </div>
+				<div class="gallery-item">
+                    <img src="images/jose3.png" alt="Senior Engineer">
+                    <div class="gallery-caption">Jose - Senior Engineer</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/workshop-group1.png" alt="Group photo">
+                    <div class="gallery-caption">Workshop participants group photo</div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section>
+            <h2>Key Sessions & Activities</h2>
+            <h3>1. Introduction to Nanosatellites</h3>
+            <p>The workshop kicked off with an overview of <strong>CubeSats</strong> (small satellites typically measuring 10x10x10 cm). Experts explained how these low-cost satellites are used for:</p>
+            <ul>
+                <li>Earth observation</li>
+                <li>Climate monitoring</li>
+                <li>Telecommunications</li>
+                <li>Scientific experiments</li>
+            </ul>
+
+            <h3>2. Hands-On Satellite Design</h3>
+            <p>Participants worked in teams to <strong>design a basic CubeSat model</strong>, learning about:</p>
+            <ul>
+                <li>Power systems (solar panels, batteries)</li>
+                <li>On-board computers (OBC) and microcontrollers</li>
+                <li>Communication modules (UHF/VHF, S-band)</li>
+            </ul>
+
+            <div class="highlight">
+                <h3>Workshop Highlight: Practical Demonstration</h3>
+                <p>Teams competed to design the most efficient power system for their nanosatellite models, with the winning design achieving 23% better energy efficiency than baseline requirements.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Andes Space Foundation. All rights reserved.</p>
+            <p>Contact: <a href="mailto:info@andesspace.org">info@andesspace.org</a> | Follow us on <a href="#">Twitter</a> and <a href="#">LinkedIn</a></p>
+        </footer>
+    </div>
+</body>
+</html>
