@@ -16,11 +16,7 @@
             --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -30,16 +26,9 @@
             overflow-x: hidden;
         }
 
-        /* Tipografía Elegante */
-        h1, h2, h3 {
-            font-family: 'Cinzel', serif;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
+        h1, h2, h3 { font-family: 'Cinzel', serif; letter-spacing: 2px; text-transform: uppercase; }
         p, li { font-weight: 300; }
 
-        /* Header de Lujo */
         header {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                         url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=2000');
@@ -55,20 +44,9 @@
             border-bottom: 5px solid var(--gold);
         }
 
-        header h1 {
-            font-size: clamp(2.5rem, 6vw, 4.5rem);
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
-        }
+        header h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1rem; }
+        header p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; letter-spacing: 3px; }
 
-        header p {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-            font-size: 1.2rem;
-            letter-spacing: 3px;
-        }
-
-        /* Navegación Minimalista */
         nav {
             background: white;
             padding: 1rem 0;
@@ -78,146 +56,57 @@
             box-shadow: 0 5px 20px rgba(0,0,0,0.05);
         }
 
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--charcoal);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -5px;
-            left: 0;
-            background-color: var(--gold);
-            transition: var(--transition);
-        }
-
-        nav a:hover::after { width: 100%; }
+        nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; }
+        nav a { text-decoration: none; color: var(--charcoal); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; transition: var(--transition); }
         nav a:hover { color: var(--gold); }
 
-        /* Contenedores y Secciones */
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 5rem 1.5rem;
-        }
-
+        .container { max-width: 1100px; margin: 0 auto; padding: 5rem 1.5rem; }
         section { margin-bottom: 6rem; opacity: 0; transform: translateY(30px); transition: 1s all ease; }
         section.visible { opacity: 1; transform: translateY(0); }
 
-        .section-title {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+        .section-title { text-align: center; margin-bottom: 4rem; }
+        .section-title h2 { font-size: 2.2rem; position: relative; display: inline-block; padding-bottom: 1rem; }
+        .section-title h2::after { content: '♦'; position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); color: var(--gold); }
 
-        .section-title h2 {
-            font-size: 2.2rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 1rem;
-        }
-
-        .section-title h2::after {
-            content: '♦';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: var(--gold);
-            font-size: 1.2rem;
-        }
-
-        /* Tarjetas Estilo Editorial */
-        .card-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 3rem;
-        }
-
-        .card {
+        .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        
+        /* Estilo para las tarjetas de locales ASORETA */
+        .local-card {
             background: white;
-            padding: 2.5rem;
-            border: 1px solid #eee;
+            padding: 2rem;
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
             transition: var(--transition);
-            position: relative;
         }
+        .local-card:hover { transform: scale(1.02); box-shadow: 0 15px 40px rgba(0,0,0,0.07); }
+        .local-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .local-card .category { color: var(--gold); font-size: 0.7rem; font-weight: 700; text-transform: uppercase; }
+        .local-card .address { font-size: 0.85rem; color: var(--text-gray); margin: 0.5rem 0; }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: var(--gold);
-        }
-
-        .card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.2rem;
-            color: var(--charcoal);
-        }
-
-        /* Botones Elegantes */
         .btn {
             display: inline-block;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             background: var(--charcoal);
             color: white;
             text-decoration: none;
             text-transform: uppercase;
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             letter-spacing: 2px;
-            margin-top: 1.5rem;
+            margin-top: 1rem;
             transition: var(--transition);
-            border: 1px solid var(--charcoal);
         }
+        .btn:hover { background: var(--gold); }
 
-        .btn:hover {
-            background: transparent;
-            color: var(--charcoal);
-            border-color: var(--gold);
-        }
-
-        /* Mapa Personalizado */
         #map {
-            height: 600px;
+            height: 500px;
             width: 100%;
-            filter: grayscale(1) contrast(1.1); /* Estilo minimalista */
-            border: 10px solid white;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            filter: sepia(0.2) contrast(1.1);
+            border: 1px solid #ddd;
+            margin-top: 2rem;
         }
 
-        /* Footer */
-        footer {
-            background: var(--charcoal);
-            color: #888;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
+        footer { background: var(--charcoal); color: #888; padding: 4rem 2rem; text-align: center; }
         footer strong { color: var(--gold); }
-
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @media (max-width: 768px) {
-            nav ul { flex-direction: column; text-align: center; gap: 1rem; }
-            header { height: 40vh; }
-        }
     </style>
 </head>
 <body>
@@ -225,13 +114,13 @@
     <header>
         <h1>Guía MICHELINK</h1>
         <p>El Arte de la Mesa Tachirense</p>
+        <p>Por: Paul Wanner</p>
     </header>
 
     <nav>
         <ul>
             <li><a href="#inicio">La Herencia</a></li>
-            <li><a href="#empleo">Carreras</a></li>
-            <li><a href="#rutas">Experiencias</a></li>
+            <li><a href="#directorio">Directorio</a></li>
             <li><a href="#mapa">Cartografía</a></li>
         </ul>
     </nav>
@@ -242,35 +131,24 @@
                 <h2>Bienvenidos al Edén Andino</h2>
             </div>
             <div class="card-grid">
-                <div class="card">
+                <div class="card" style="background:white; padding:2.5rem; border:1px solid #eee;">
                     <h3>Tradición Ancestral</h3>
                     <p>Más de cinco siglos de fusión cultural narrados a través de fogones y recetas que son patrimonio vivo de Venezuela.</p>
                 </div>
-                <div class="card">
+                <div class="card" style="background:white; padding:2.5rem; border:1px solid #eee;">
                     <h3>Excelencia Local</h3>
-                    <p>Desde el café de altura en Rubio hasta la maestría panadera de San Cristóbal, cada rincón es una estrella en nuestro mapa.</p>
+                    <p>Desde el café de altura hasta la maestría panadera de San Cristóbal, cada rincón es una estrella en nuestro mapa.</p>
                 </div>
             </div>
         </section>
 
-        <section id="empleo" class="visible">
+        <section id="directorio" class="visible">
             <div class="section-title">
-                <h2>Oportunidades de Élite</h2>
+                <h2>Directorio</h2>
+                <p style="text-align: center; font-family: 'Playfair Display';">Selección Oficial de la Asociación Gastronómica</p>
             </div>
-            <div class="card-grid">
-                <div class="card">
-                    <span style="color:var(--gold)">$800 - $1,200</span>
-                    <h3>Chef de Cuisine</h3>
-                    <p>La Casa del Mute busca un visionario de la cocina andina para liderar su brigada principal.</p>
-                    <a href="#" class="btn">Postularse</a>
+            <div class="card-grid" id="grid-locales">
                 </div>
-                <div class="card">
-                    <span style="color:var(--gold)">$600 - $900</span>
-                    <h3>Maître d'Hôtel</h3>
-                    <p>Café del Valle requiere experto en hospitalidad para gestión de salón y atención premium.</p>
-                    <a href="#" class="btn">Postularse</a>
-                </div>
-            </div>
         </section>
 
         <section id="mapa" class="visible">
@@ -290,12 +168,46 @@
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
-        // Inicialización del mapa con estilo suave
-        const map = L.map('map', { scrollWheelZoom: false }).setView([7.7669, -72.2250], 12);
+        // 1. Datos del PDF de ASORETA
+        const locales = [
+            { n: "El Establo", cat: "Venezolana", dir: "Av. Principal de la Guayana", ig: "@elestablosc", coords: [7.7785, -72.2150] },
+            { n: "0276 Sushi House", cat: "Asiática", dir: "Carrera 19, Barrio Obrero", ig: "@0276sushihouse", coords: [7.7725, -72.2210] },
+            { n: "La Cioccolata", cat: "Italiana", dir: "Carrera 23, Barrio Obrero", ig: "@lacioccolata_sc", coords: [7.7748, -72.2225] },
+            { n: "Biga 50 Pizzería", cat: "Italiana", dir: "Av. Ferrero Tamayo", ig: "@biga50pizzeria", coords: [7.7810, -72.2185] },
+            { n: "Nan King", cat: "Asiática", dir: "Av. 19 de Abril", ig: "@nanking_sc", coords: [7.7580, -72.2280] },
+            { n: "El Meriendero", cat: "Café/Postres", dir: "Carrera 19, Barrio Obrero", ig: "@elmeriendero", coords: [7.7712, -72.2215] }
+        ];
+
+        // 2. Cargar Tarjetas
+        const grid = document.getElementById('grid-locales');
+        locales.forEach(local => {
+            const card = document.createElement('div');
+            card.className = 'local-card';
+            card.innerHTML = `
+                <span class="category">${local.cat}</span>
+                <h3>${local.n}</h3>
+                <p class="address">${local.dir}</p>
+                <a href="#" class="btn" onclick="enfocarMapa(${local.coords[0]}, ${local.coords[1]})">Explorar</a>
+            `;
+            grid.appendChild(card);
+        });
+
+        // 3. Inicializar Mapa
+        const map = L.map('map', { scrollWheelZoom: false }).setView([7.7720, -72.2200], 14);
         
         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
             attribution: '©OpenStreetMap'
         }).addTo(map);
+
+        // Añadir marcadores
+        locales.forEach(local => {
+            const marker = L.marker(local.coords).addTo(map);
+            marker.bindPopup(`<b>${local.n}</b><br>${local.cat}<br><small>${local.ig}</small>`);
+        });
+
+        function enfocarMapa(lat, lng) {
+            map.flyTo([lat, lng], 17);
+        }
 
         // Script para revelado de secciones al hacer scroll
         const observerOptions = { threshold: 0.1 };
