@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andes Space | Hardware Division</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: #000 url('images/space-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 0, 0, 0.85);
+            z-index: -1;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(30, 10, 0, 0.85);
+            box-shadow: 0 0 20px rgba(255, 100, 0, 0.4);
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #ff6600;
+        }
+        h1 { color: #ff6600; text-shadow: 0 0 10px rgba(255,102,0,0.4); }
+        h2 { color: #ffb380; border-bottom: 1px solid #ff6600; padding-bottom: 10px; }
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #ff6600;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .back-btn:hover { text-decoration: underline; }
+        .spec-box {
+            background: rgba(80, 30, 0, 0.4);
+            padding: 20px;
+            border-left: 4px solid #ff6600;
+            border-radius: 0 5px 5px 0;
+            margin: 20px 0;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ff6600; color: #aaa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn">← Volver al Inicio</a>
+        <header>
+            <h1>🛠️ Andes Space Hardware Division</h1>
+            <p>Architecting the physical framework and electronics for outer space</p>
+        </header>
+
+        <section>
+            <h2>Mission & Objectives</h2>
+            <p>Our hardware division designs, simulates, and manufactures the physical systems of our CubeSats. Dealing with extreme temperature swings and high radiation requires highly rigorous hardware design and rigorous component picking.</p>
+        </section>
+
+        <section>
+            <h2>Engineering Core Subsystems</h2>
+            <h3>1. Electrical Power Subsystems (EPS)</h3>
+            <p>We work on high-efficiency solar panel layouts, battery management networks, and deployment modules to guarantee clean power distribution across all operational phases.</p>
+            
+            <h3>2. Attitude Determination and Control Systems (ADCS)</h3>
+            <p>Integrating magnetorquers, reaction wheels, and sun sensors to steer the nanosatellite accurately towards targeted areas on earth.</p>
+
+            <h3>3. Structures & Testing</h3>
+            <p>Machining standard 1U/3U structures out of space-grade Aluminum 7075. Testing designs for extreme vibrations, thermal vacuums, and physical structural strain profiles.</p>
+        </section>
+
+        <section>
+            <div class="spec-box">
+                <h3>Hardware Capabilities & Tools</h3>
+                <ul>
+                    <li><strong>Design & Simulation:</strong> Altium Designer, KiCAD, SolidWorks ANSYS</li>
+                    <li><strong>Manufacturing:</strong> Multi-layer PCB manufacturing, CNC milling, SMD reflow soldering</li>
+                    <li><strong>Space Standards:</strong> Adhering to ESA ECSS and NASA CubeSat Design Specifications</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Andes Space Hardware Division. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
