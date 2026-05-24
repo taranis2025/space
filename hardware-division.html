@@ -8,8 +8,7 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
             color: #fff;
             background: #000 url('images/space-bg.jpg') no-repeat center center fixed;
             background-size: cover;
@@ -23,81 +22,92 @@
             background: rgba(15, 0, 0, 0.85);
             z-index: -1;
         }
+        nav {
+            background: rgba(40, 10, 0, 0.95);
+            border-bottom: 2px solid #ff6600;
+            position: sticky; top: 0; z-index: 1000;
+            display: flex; justify-content: center; padding: 10px 0;
+        }
+        .nav-tabs { display: flex; gap: 15px; }
+        .nav-link {
+            color: #ffb380; text-decoration: none; padding: 10px 20px;
+            border-radius: 5px; font-weight: bold; text-transform: uppercase; font-size: 0.8em;
+        }
+        .nav-link.active { background: #ff6600; color: white; }
+
         .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 30px;
+            max-width: 900px; margin: 30px auto; padding: 30px;
             background: rgba(30, 10, 0, 0.85);
             box-shadow: 0 0 20px rgba(255, 100, 0, 0.4);
             border-radius: 10px;
-            margin-top: 30px;
-            margin-bottom: 30px;
         }
-        header {
-            text-align: center;
-            padding: 20px 0;
-            border-bottom: 2px solid #ff6600;
+        header { text-align: center; padding: 20px 0; border-bottom: 2px solid #ff6600; }
+        h1 { color: #ff6600; }
+        h2 { color: #ffb380; border-bottom: 1px solid #551a00; padding-bottom: 5px; margin-top: 30px; }
+        
+        .hw-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;
         }
-        h1 { color: #ff6600; text-shadow: 0 0 10px rgba(255,102,0,0.4); }
-        h2 { color: #ffb380; border-bottom: 1px solid #ff6600; padding-bottom: 10px; }
-        .back-btn {
-            display: inline-block;
-            margin-bottom: 20px;
-            color: #ff6600;
-            text-decoration: none;
-            font-weight: bold;
+        .hw-card {
+            background: rgba(255, 102, 0, 0.05);
+            padding: 15px; border-radius: 8px; border: 1px solid rgba(255, 102, 0, 0.3);
         }
-        .back-btn:hover { text-decoration: underline; }
-        .spec-box {
-            background: rgba(80, 30, 0, 0.4);
-            padding: 20px;
-            border-left: 4px solid #ff6600;
-            border-radius: 0 5px 5px 0;
-            margin: 20px 0;
+        .hw-card h4 { margin: 0 0 10px 0; color: #ffb380; }
+        .tag-hw {
+            font-size: 0.7em; background: #632800; padding: 2px 8px; border-radius: 10px; text-transform: uppercase;
         }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 10px; }
-        footer { text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #ff6600; color: #aaa; }
     </style>
 </head>
 <body>
+    <nav>
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="software-division.html" class="nav-link">Software</a>
+            <a href="hardware-division.html" class="nav-link active">Hardware</a>
+        </div>
+    </nav>
+
     <div class="container">
-        <a href="index.html" class="back-btn">← Back to main page</a>
         <header>
-            <h1>🛠️ Andes Space Hardware Division</h1>
-            <p>Architecting the physical framework and electronics for outer space</p>
+            <h1>🛠️ Hardware, IoT & Control</h1>
+            <p>Physical Systems, Robotics and Industrial Automation</p>
         </header>
 
         <section>
-            <h2>Mission & Objectives</h2>
-            <p>Our hardware division designs, simulates, and manufactures the physical systems of our CubeSats. Dealing with extreme temperature swings and high radiation requires highly rigorous hardware design and rigorous component picking.</p>
+            <h2>IoT & Smart Control</h2>
+            <div class="hw-grid">
+                <div class="hw-card">
+                    <span class="tag-hw">IoT Ecosystem</span>
+                    <h4>Andes Nodes</h4>
+                    <p>Red de sensores inalámbricos para monitoreo ambiental y telemetría industrial de bajo consumo.</p>
+                </div>
+                <div class="hw-card">
+                    <span class="tag-hw">Control Systems</span>
+                    <h4>PID Precision Control</h4>
+                    <p>Sistemas de control en tiempo real para el posicionamiento de antenas y estabilización de cargas útiles.</p>
+                </div>
+            </div>
         </section>
 
         <section>
-            <h2>Engineering Core Subsystems</h2>
-            <h3>1. Electrical Power Subsystems (EPS)</h3>
-            <p>We work on high-efficiency solar panel layouts, battery management networks, and deployment modules to guarantee clean power distribution across all operational phases.</p>
-            
-            <h3>2. Attitude Determination and Control Systems (ADCS)</h3>
-            <p>Integrating magnetorquers, reaction wheels, and sun sensors to steer the nanosatellite accurately towards targeted areas on earth.</p>
-
-            <h3>3. Structures & Testing</h3>
-            <p>Machining standard 1U/3U structures out of space-grade Aluminum 7075. Testing designs for extreme vibrations, thermal vacuums, and physical structural strain profiles.</p>
+            <h2>Hardware Automation</h2>
+            <p>Llevamos la automatización al mundo físico mediante integración electrónica:</p>
+            <ul>
+                <li><strong>PLC Integration:</strong> Automatización de bancos de pruebas para componentes espaciales.</li>
+                <li><strong>Smart Power:</strong> Sistemas embebidos para la gestión inteligente de energía en infraestructuras críticas.</li>
+            </ul>
         </section>
 
         <section>
-            <div class="spec-box">
-                <h3>Hardware Capabilities & Tools</h3>
-                <ul>
-                    <li><strong>Design & Simulation:</strong> Altium Designer, KiCAD, SolidWorks ANSYS</li>
-                    <li><strong>Manufacturing:</strong> Multi-layer PCB manufacturing, CNC milling, SMD reflow soldering</li>
-                    <li><strong>Space Standards:</strong> Adhering to ESA ECSS and NASA CubeSat Design Specifications</li>
-                </ul>
+            <h2>Industrial Prototyping</h2>
+            <div class="hw-card" style="width: auto;">
+                <h4>Embedded Robotics</h4>
+                <p>Desarrollo de hardware a medida para robótica móvil y brazos mecánicos automatizados, integrando visión artificial con procesamiento local (Edge Computing).</p>
             </div>
         </section>
 
         <footer>
-            <p>© 2026 Andes Space Hardware Division. All rights reserved.</p>
+            <p>© 2026 Andes Space Hardware Division</p>
         </footer>
     </div>
 </body>
