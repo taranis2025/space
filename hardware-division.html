@@ -46,25 +46,79 @@
         }
         header { text-align: center; padding: 20px 0; border-bottom: 2px solid #888; }
         h1 { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.2); }
-        h2 { color: #ccc; border-bottom: 1px solid #444; padding-bottom: 5px; margin-top: 30px; }
+        h2 { color: #ccc; border-bottom: 1px solid #444; padding-bottom: 5px; margin-top: 40px; }
         
-        .hw-grid {
-            display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;
+        /* Portfolio Expandable Layout */
+        .portfolio-grid {
+            display: grid; grid-template-columns: 1fr; gap: 20px; margin-top: 20px;
         }
-        .hw-card {
+        details {
             background: rgba(255, 255, 255, 0.03);
-            padding: 15px; border-radius: 8px; border: 1px solid #444;
-            transition: border 0.3s ease;
+            border: 1px solid #444;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
-        .hw-card:hover { border-color: #888; background: rgba(255, 255, 255, 0.06); }
-        .hw-card h4 { margin: 0 0 10px 0; color: #eee; }
+        details[open] {
+            border-color: #888;
+            background: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.05);
+        }
+        summary {
+            padding: 18px;
+            font-weight: bold;
+            font-size: 1.1em;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            color: #fff;
+        }
+        summary::-webkit-details-marker { display: none; }
+        summary::after {
+            content: '┼';
+            font-size: 1.2em;
+            color: #888;
+            transition: transform 0.3s ease;
+        }
+        details[open] summary::after {
+            transform: rotate(45deg);
+            color: #fff;
+        }
+        .details-content {
+            padding: 0 20px 20px 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            animation: fadeIn 0.4s ease;
+        }
+        
+        /* Specs Table Style */
+        .specs-table {
+            width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em;
+        }
+        .specs-table td {
+            padding: 8px 12px; border-bottom: 1px solid #333;
+        }
+        .specs-table td:first-child {
+            font-weight: bold; color: #aaa; width: 30%;
+        }
+        .specs-table td:last-child {
+            color: #eee;
+        }
         
         .tag-hw {
-            font-size: 0.7em; background: #333; color: #bbb; padding: 2px 8px; 
+            font-size: 0.7em; background: #333; color: #bbb; padding: 3px 10px; 
             border-radius: 10px; text-transform: uppercase; border: 1px solid #555;
+            margin-left: 10px; vertical-align: middle;
         }
         ul li { margin-bottom: 10px; color: #bbb; }
-        footer { text-align: center; margin-top: 40px; color: #666; font-size: 0.8em; }
+        footer { text-align: center; margin-top: 50px; color: #666; font-size: 0.8em; }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
@@ -78,62 +132,92 @@
 
     <div class="container">
         <header>
-            <h1>🛠️ Hardware & Industrial Engineering</h1>
-            <p style="color: #888;">Physical Systems, Robotics, IoT and Control Systems</p>
+            <h1>🛠️ Hardware & Embedded Systems Division</h1>
+            <p style="color: #888;">Aerospace Architectures, IoT Nodes, and Electronic Engineering</p>
         </header>
 
         <section>
-            <h2>Multidisciplinary Systems Engineering</h2>
-            <div class="hw-grid">
-                <div class="hw-card">
-                    <span class="tag-hw">E-Mobility</span>
-                    <h4>EV Powertrain Design</h4>
-                    <p>Custom design and integration of lightweight electric traction drive setups and lithium battery arrays.</p>
-                </div>
-                <div class="hw-card">
-                    <span class="tag-hw">IoT Ecosystems</span>
-                    <h4>Industrial Andes Nodes</h4>
-                    <p>High-reliability wireless telemetry sensor arrays engineered for dense EMI (electromagnetic interference) environments.</p>
-                </div>
-                <div class="hw-card">
-                    <span class="tag-hw">Renewable Energy</span>
-                    <h4>Micro-Grid Control</h4>
-                    <p>Embedded electronic management modules featuring real-time load shedding for hybrid solar/wind deployments.</p>
-                </div>
-                <div class="hw-card">
-                    <span class="tag-hw">Mechatronics</span>
-                    <h4>Industrial Cobots</h4>
-                    <p>Collaborative robotic arms boasting precise integrated torque feedback loops for advanced manufacturing assembly.</p>
-                </div>
+            <h2>Featured Engineering Portfolio</h2>
+            <p style="color: #aaa; font-style: italic; margin-bottom: 20px;">Click on any project block below to expand its full technical specifications and capabilities.</p>
+            
+            <div class="portfolio-grid">
+                
+                <details>
+                    <summary>
+                        <span>Educational Cube Satellite <span class="tag-hw">Aerospace</span></span>
+                    </summary>
+                    <div class="details-content">
+                        <p>Developed in collaboration with the KSF Space Foundation, this modular educational nanosatellite serves as an orbital development framework for testing instrumentation and payload sensor tracking loops.</p>
+                        <table class="specs-table">
+                            <tr><td>Main Feature</td><td>Educational cube satellite deployment architecture.</td></tr>
+                            <tr><td>Power Supply</td><td>USB powered for integration labs, complemented by high-efficiency space-grade Solar Panels.</td></tr>
+                            <tr><td>Communication</td><td>Multi-band wireless data links: BLE, WiFi, and long-range LoRa.</td></tr>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        <span>Advanced Low-Power Sensor Node & Repeater <span class="tag-hw">Automation / IoT</span></span>
+                    </summary>
+                    <div class="details-content">
+                        <p>An advanced multi-interface hardware module engineered for telemetry routing and industrial automation fields with aggressive power consumption limitations.</p>
+                        <table class="specs-table">
+                            <tr><td>Main Feature</td><td>Solar panel supplied device, functioning as a high-reliability LoRa repeater with low power consumption optimizations.</td></tr>
+                            <tr><td>Power Supply</td><td>Solar panel (6V input), USB Type-C (5V, 2A) fast prototyping interface, and a built-in 3.7V LiPo battery backup subsystem.</td></tr>
+                            <tr><td>Communication</td><td>Full industrial stack: WiFi, LoRa, RS485 telemetry, I2C, and SPI UART.</td></tr>
+                            <tr><td>Inputs & GPIOs</td><td>2 Analog-to-Digital Channels (ADC 0-5V), 2 dual-purpose GPIO/ADC (3.3V), and 4 specialized General Purpose Input/Outputs (GPIO).</td></tr>
+                            <tr><td>Enclosure</td><td>ABS IP65 waterproof housing, dimensions: 100x68x50 mm.</td></tr>
+                            <tr><td>Peripherals</td><td>Integrated 12VDC dedicated power supply line for external RS485 industrial sensors. Compatible with LCD I2C 5V displays and Oled I2C 3V3 displays.</td></tr>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        <span>NRF52840 Solar Node & Repeater <span class="tag-hw">IoT / Control</span></span>
+                    </summary>
+                    <div class="details-content">
+                        <p>A specialized wireless network node engineered using the NRF52840 system-on-chip, perfectly suited for remote field deployment topologies and smart monitoring networks.</p>
+                        <table class="specs-table">
+                            <tr><td>Main Feature</td><td>NRF52840 based solar panel supplied wireless device and LoRa repeater system with ultra-low power metrics.</td></tr>
+                            <tr><td>Power Supply</td><td>Solar panel (6V input), USB Type-C (5V, 2A), and integrated 3.7V LiPo battery protection management.</td></tr>
+                            <tr><td>Communication</td><td>BLE (Bluetooth Low Energy), LoRa long-range, RS485, I2C, and SPI UART protocols.</td></tr>
+                            <tr><td>Inputs</td><td>2 Analog-to-Digital Channels (ADC 0-5V processing lines).</td></tr>
+                            <tr><td>Enclosure</td><td>ABS IP65 industrial waterproof rating shell, dimensions: 100x68x50 mm.</td></tr>
+                            <tr><td>Peripherals</td><td>Dedicated 12VDC power array to drive active RS485 telemetry elements. Direct pinouts compatible with 5V touch screens and OLED I2C 3V3 displays.</td></tr>
+                        </table>
+                    </div>
+                </details>
+
+                <details>
+                    <summary>
+                        <span>Ultra-Compact LoRa GPS Tracker <span class="tag-hw">Embedded IoT</span></span>
+                    </summary>
+                    <div class="details-content">
+                        <p>A miniature telemetry board optimized for real-time geolocation tracking networks, utilizing sub-GHz long-range frequencies for agricultural asset tracking, domestic pets, and cattle monitoring fields.</p>
+                        <table class="specs-table">
+                            <tr><td>Main Feature</td><td>Small size, lightweight LoRa + GPS tracking module customized for cattle, wildlife, and pets.</td></tr>
+                            <tr><td>Power Supply</td><td>Highly integrated 3.7V LiPo battery management circuitry.</td></tr>
+                            <tr><td>Communication</td><td>Integrated LoRa transceiver array and high-sensitivity GPS processing engine.</td></tr>
+                        </table>
+                    </div>
+                </details>
+
             </div>
         </section>
 
         <section>
-            <h2>Infrastructure, Control & Bio-Engineering</h2>
-            <div class="hw-grid">
-                <div class="hw-card">
-                    <span class="tag-hw">Control Systems</span>
-                    <h4>PID Precision Controls</h4>
-                    <p>Ultra-low latency closed-loop control units built for antenna tracking mechanisms and scientific payload dampening.</p>
-                </div>
-                <div class="hw-card">
-                    <span class="tag-hw">Biomedical IoT</span>
-                    <h4>Wearable Bio-Sensors</h4>
-                    <p>Medical-grade wearable telemetry devices streaming health metrics over fully encrypted low-power wireless bands.</p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <h2>Automation & Materials Testing</h2>
+            <h2>Core Infrastructure Projects</h2>
             <ul>
-                <li><strong>Structural Health Monitoring:</strong> Smart piezo-electric node networks analyzing early micro-fractures and stress fatigue in infrastructure assets.</li>
-                <li><strong>PLC & Smart Grid Integration:</strong> Custom programmable logic control units built for automated environmental testing chambers and smart electrical grids.</li>
+                <li><strong>E-Mobility:</strong> EV Powertrain Designs featuring advanced lightweight electric traction systems.</li>
+                <li><strong>Renewable Energy:</strong> Micro-Grid control electronics with automated load-shedding frameworks for hybrid setups.</li>
+                <li><strong>Mechatronics:</strong> Collaborative robotics (Cobots) integrating precise real-time torque feedback loops.</li>
             </ul>
         </section>
 
         <footer>
-            <p>© 2026 Andes Space Hardware Division | Industrial Systems Group</p>
+            <p>© 2026 Andes Space Hardware Division | Industrial Systems & Aerospace Group</p>
         </footer>
     </div>
 </body>
