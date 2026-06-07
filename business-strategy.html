@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Strategy & Corporate Framework | Andes Space</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background: #000 url('images/space-bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            min-height: 100vh;
+        }
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        nav {
+            background: rgba(0, 20, 40, 0.95);
+            border-bottom: 2px solid #0077ff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+        .nav-tabs {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-link {
+            color: #4fc3f7;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid transparent;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover {
+            background: rgba(79, 195, 247, 0.1);
+            border-color: #4fc3f7;
+            box-shadow: 0 0 10px rgba(79, 195, 247, 0.3);
+        }
+        .nav-link.active {
+            background: #0077ff;
+            color: white;
+            border-color: #0077ff;
+        }
+
+        /* --- CONTENEDOR --- */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background: rgba(0, 20, 40, 0.85);
+            box-shadow: 0 0 20px rgba(0, 80, 150, 0.5);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #0077ff;
+        }
+        .logo { max-width: 200px; height: auto; margin-bottom: 20px; }
+        h1 {
+            color: #4fc3f7;
+            text-shadow: 0 0 10px rgba(79, 195, 247, 0.5);
+            margin-bottom: 10px;
+        }
+        h2 {
+            color: #4fc3f7;
+            margin-top: 40px;
+            border-bottom: 1px solid #0077ff;
+            padding-bottom: 10px;
+        }
+
+        /* --- FILAS DE PRODUCTO / SHOWCASE --- */
+        .showcase-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            align-items: center;
+            margin: 30px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(0, 119, 255, 0.2);
+            border-radius: 8px;
+            padding: 20px;
+        }
+        .showcase-img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #0077ff;
+            box-shadow: 0 0 15px rgba(0, 119, 255, 0.2);
+        }
+        
+        /* --- TABLA CANVAS --- */
+        .canvas-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            font-size: 0.95em;
+            background: rgba(0, 10, 25, 0.6);
+        }
+        .canvas-table th {
+            background: #00509d;
+            color: #fff;
+            padding: 14px;
+            text-align: left;
+            border: 1px solid #0077ff;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            letter-spacing: 0.5px;
+        }
+        .canvas-table td {
+            padding: 14px;
+            border: 1px solid rgba(0, 119, 255, 0.3);
+            vertical-align: top;
+        }
+        .canvas-table tr:nth-child(even) {
+            background: rgba(0, 119, 255, 0.05);
+        }
+        .canvas-title {
+            color: #4fc3f7;
+            font-weight: bold;
+        }
+        footer { text-align: center; margin-top: 50px; padding: 20px; border-top: 1px solid #0077ff; color: #aaa; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-tabs">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="software-division.html" class="nav-link">Software</a>
+            <a href="hardware-division.html" class="nav-link">Hardware</a>
+            <a href="business-strategy.html" class="nav-link active">Business Strategy</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <img src="andes_space_logo2.png" alt="Andes Space Foundation Logo" class="logo">
+            <h1>Business Strategy & Corporate Framework</h1>
+            <p style="font-style: italic; color: #aaa;">Andes Space Commercial & Scalability Architecture</p>
+        </header>
+
+        <section>
+            <h2>Commercial Vision</h2>
+            <p>Andes Space couples agile aerospace engineering with a sustainable business framework. By deployment of premium technical bootcamps alongside embedded software development, the organization addresses high-demand capacity building inside emerging markets while establishing scalable IP licensing infrastructure.</p>
+
+            <div class="showcase-block">
+                <div>
+                    <h3 style="color: #4fc3f7; margin-top: 0; font-size: 1.3em;">Modular Avionics Stack</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95em;">Our inner-system architecture leverages multi-layered circuit topologies and modular computing boards. This layout provides fault-tolerant data-buses and reliable Electrical Power Systems (EPS) capable of handling real-time telemetry processing within severe Low Earth Orbit (LEO) environments.</p>
+                </div>
+                <img src="1780786070714.jpg" alt="Andes Space Avionics Layout" class="showcase-img">
+            </div>
+        </section>
+
+        <section>
+            <h2>Strategic Business Model Canvas</h2>
+            <p>The operational milestones achieved during our regional workshops validate a lean, cost-efficient business infrastructure engineered to maximize commercial conversion profiles.</p>
+            
+            <table class="canvas-table">
+                <thead>
+                    <tr>
+                        <th style="width: 30%;">Canvas Pillar</th>
+                        <th style="width: 70%;">Andes Space Strategic Implementation</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="canvas-title">Value Propositions</td>
+                        <td>Accessible and highly tailored CubeSat software/hardware solutions, professional space-engineering certificates, and turnkey academic launch brokerage.</td>
+                    </tr>
+                    <tr>
+                        <td class="canvas-title">Customer Segments</td>
+                        <td>Latin American academic faculties, private agricultural/IoT startups seeking low-cost geospatial fields, and regional science ministries.</td>
+                    </tr>
+                    <tr>
+                        <td class="canvas-title">Channels</td>
+                        <td>Our centralized platform at <span style="color:#4fc3f7;">andesspace.com</span>, strategic in-person bootcamps, and professional aerospace engineering congresses.</td>
+                    </tr>
+                    <tr>
+                        <td class="canvas-title">Revenue Streams</td>
+                        <td>Proprietary on-board logic and RTOS code IP licensing, specialized workshop tuition fees, and custom hardware prototyping contracts.</td>
+                    </tr>
+                    <tr>
+                        <td class="canvas-title">Key Activities</td>
+                        <td>Continuous aerospace R&D, structural vibration analysis, and comprehensive Hardware-in-the-Loop integration testing.</td>
+                    </tr>
+                    <tr>
+                        <td class="canvas-title">Cost Structure</td>
+                        <td>Senior engineering research incentives, laboratory component logistics, and industry-grade CAD/CAE software licensing overhead.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section>
+            <div class="showcase-block">
+                <img src="1780786070723.jpg" alt="1U CubeSat Flight Assembly" class="showcase-img">
+                <div>
+                    <h3 style="color: #4fc3f7; margin-top: 0; font-size: 1.3em;">Structural Flight Mechanics</h3>
+                    <p style="color: #cbd5e1; font-size: 0.95em;">The complete 1U CubeSat model incorporates certified side-rail frames, mechanical deployment interlocks, and surface-integrated photodiode solar arrays. The structure is structurally optimized via computer-aided modeling to absorb high launch vehicle vibration dynamics.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Andes Space. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
